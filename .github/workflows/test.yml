@@ -3,11 +3,14 @@ name: Static analysis
 on: [pull_request]
 
 jobs:
-  static analysis:
+  static_analysis:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Run static analysis
-      uses: JacobDomagala/StaticAnalysis@master
+      uses: JacobDomagala/StaticAnalysis@12-check-for-file-length
+      with:
+        exclude_dir: lib
+        cmake_args: -DCMAKE_BUILD_TYPE=Debug
