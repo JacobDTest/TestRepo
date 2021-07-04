@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run static analysis
-      uses: JacobDomagala/StaticAnalysis@19-fix-issue-with-single-line-files
+      uses: JacobDomagala/StaticAnalysis@master
       with:
         exclude_dir: lib
         cmake_args: -DCMAKE_BUILD_TYPE=Debug
