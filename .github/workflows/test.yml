@@ -1,6 +1,6 @@
 name: Static analysis
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   static_analysis:
@@ -14,3 +14,5 @@ jobs:
       with:
         exclude_dir: lib
         cmake_args: -DCMAKE_BUILD_TYPE=Debug
+        verbose: true
+
